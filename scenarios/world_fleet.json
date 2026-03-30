@@ -1,0 +1,458 @@
+{
+  "tick_rate_hz": 2.0,
+  "time_scale": 81000.0,
+  "items": [
+    {
+      "name": "eurasia-corridor",
+      "description": "Istanbul to Lagos west africa corridor.",
+      "meta": {
+        "id": "eurasia-corridor",
+        "name": "Istanbul - Lagos",
+        "ship_name": "Marmara Atlas",
+        "origin_port": "Istanbul",
+        "origin_country": "Turkiye",
+        "destination_port": "Lagos Harbor",
+        "destination_country": "Nigeria",
+        "color": "#2470a0"
+      },
+      "ship": {
+        "name": "Marmara Atlas",
+        "latitude": 40.995,
+        "longitude": 29.0186,
+        "speed_knots": 15.0,
+        "target_speed_knots": 16.2,
+        "heading_deg": 240.0,
+        "fuel_percent": 100.0,
+        "base_depth_m": 42.0,
+        "profile": {
+          "role": "container",
+          "class_name": "Neo Panamax Container",
+          "length_m": 301.0,
+          "beam_m": 43.0,
+          "design_draft_m": 11.8,
+          "cargo_capacity": 8400,
+          "cargo_unit": "TEU",
+          "service_speed_knots": 18.8,
+          "maneuvering_speed_knots": 8.8,
+          "max_turn_rate_deg_min": 23.0
+        },
+        "port_ops": {
+          "approach_distance_nm": 180.0,
+          "harbor_distance_nm": 52.0,
+          "approach_speed_knots": 10.5,
+          "harbor_speed_knots": 6.8,
+          "berth_duration_ticks": 14,
+          "cargo_handling_rate_per_tick": 2.2
+        }
+      },
+      "environment": {
+        "wave_height_m": 1.8,
+        "wind_speed_knots": 18.0,
+        "wind_direction_deg": 228.0,
+        "current_knots": 1.3,
+        "current_set_deg": 178.0,
+        "visibility_nm": 8.0,
+        "water_temperature_c": 20.0,
+        "air_temperature_c": 23.0
+      },
+      "engine": {
+        "base_rpm": 980.0,
+        "max_rpm": 2350.0,
+        "idle_rpm": 390.0,
+        "base_temperature_c": 71.0,
+        "fuel_burn_lph": 150.0,
+        "rated_power_kw": 9800.0,
+        "hotel_load_kw": 245.0
+      },
+      "faults": {
+        "enabled": true,
+        "gps_drift_chance_per_hour": 0.018,
+        "radar_fault_chance_per_hour": 0.012,
+        "overheating_chance_per_hour": 0.026,
+        "oil_pressure_fault_chance_per_hour": 0.017,
+        "generator_fault_chance_per_hour": 0.011
+      },
+      "events": [
+        {
+          "code": "med_crosswind",
+          "kind": "weather",
+          "title": "Mediterranean Crosswind",
+          "start_tick": 10,
+          "end_tick": 36,
+          "severity": "warning",
+          "message": "Akdeniz gecisinde capraz ruzgar kuvvetleniyor.",
+          "wind_delta_knots": 8.0,
+          "current_set_shift_deg": 18.0
+        },
+        {
+          "code": "lagos_congestion",
+          "kind": "port",
+          "title": "Lagos Port Congestion",
+          "start_tick": 42,
+          "end_tick": 65,
+          "severity": "advisory",
+          "message": "Liman yaklasiminda trafige bagli hiz dususu.",
+          "visibility_delta_nm": -1.2,
+          "current_delta_knots": 0.5,
+          "fuel_penalty_percent": 6.0
+        }
+      ],
+        "route": {
+          "waypoints": [
+            { "name": "Haydarpasa", "latitude": 40.995, "longitude": 29.0186 },
+            { "name": "Marmara Sea", "latitude": 40.72, "longitude": 28.2 },
+            { "name": "Dardanelles", "latitude": 39.92, "longitude": 26.05 },
+            { "name": "Aegean Exit", "latitude": 38.45, "longitude": 24.95 },
+            { "name": "Ionian Sea", "latitude": 36.0, "longitude": 19.0 },
+            { "name": "Central Mediterranean", "latitude": 35.4, "longitude": 14.0 },
+            { "name": "Gibraltar Strait", "latitude": 35.9, "longitude": -5.7 },
+            { "name": "Canary Lane", "latitude": 28.0, "longitude": -18.5 },
+            { "name": "West Africa Offshore", "latitude": 12.0, "longitude": -24.0 },
+            { "name": "Equatorial Atlantic", "latitude": -1.0, "longitude": -10.0 },
+            { "name": "Gulf of Guinea West", "latitude": 1.8, "longitude": -2.6 },
+            { "name": "Lagos Approach", "latitude": 4.9, "longitude": 2.2 },
+            { "name": "Lagos Harbor", "latitude": 6.44, "longitude": 3.39 }
+          ],
+        "ports": [
+          { "name": "Haydarpasa", "latitude": 40.995, "longitude": 29.0186, "kind": "port" },
+          { "name": "Lagos Harbor", "latitude": 6.44, "longitude": 3.39, "kind": "port" }
+        ]
+      }
+    },
+    {
+      "name": "atlantic-bridge",
+      "description": "Rotterdam to New York container bridge.",
+      "meta": {
+        "id": "atlantic-bridge",
+        "name": "Rotterdam - New York",
+        "ship_name": "North Sea Relay",
+        "origin_port": "Rotterdam",
+        "origin_country": "Netherlands",
+        "destination_port": "New York",
+        "destination_country": "United States",
+        "color": "#c56a47"
+      },
+      "ship": {
+        "name": "North Sea Relay",
+        "latitude": 50.6,
+        "longitude": -5.8,
+        "speed_knots": 17.0,
+        "target_speed_knots": 18.4,
+        "heading_deg": 270.0,
+        "fuel_percent": 100.0,
+        "base_depth_m": 48.0,
+        "profile": {
+          "role": "container",
+          "class_name": "Atlantic Feeder",
+          "length_m": 266.0,
+          "beam_m": 36.0,
+          "design_draft_m": 10.4,
+          "cargo_capacity": 5100,
+          "cargo_unit": "TEU",
+          "service_speed_knots": 19.4,
+          "maneuvering_speed_knots": 9.0,
+          "max_turn_rate_deg_min": 24.0
+        },
+        "port_ops": {
+          "approach_distance_nm": 170.0,
+          "harbor_distance_nm": 44.0,
+          "approach_speed_knots": 11.2,
+          "harbor_speed_knots": 7.1,
+          "berth_duration_ticks": 11,
+          "cargo_handling_rate_per_tick": 2.0
+        }
+      },
+      "environment": {
+        "wave_height_m": 2.1,
+        "wind_speed_knots": 21.0,
+        "wind_direction_deg": 246.0,
+        "current_knots": 1.5,
+        "current_set_deg": 258.0,
+        "visibility_nm": 7.0,
+        "water_temperature_c": 15.0,
+        "air_temperature_c": 16.0
+      },
+      "engine": {
+        "base_rpm": 1020.0,
+        "max_rpm": 2400.0,
+        "idle_rpm": 410.0,
+        "base_temperature_c": 72.0,
+        "fuel_burn_lph": 165.0,
+        "rated_power_kw": 10200.0,
+        "hotel_load_kw": 235.0
+      },
+      "faults": {
+        "enabled": true,
+        "gps_drift_chance_per_hour": 0.013,
+        "radar_fault_chance_per_hour": 0.019,
+        "overheating_chance_per_hour": 0.022,
+        "oil_pressure_fault_chance_per_hour": 0.014,
+        "generator_fault_chance_per_hour": 0.01
+      },
+      "events": [
+        {
+          "code": "north_atlantic_front",
+          "kind": "weather",
+          "title": "North Atlantic Front",
+          "start_tick": 8,
+          "end_tick": 30,
+          "severity": "warning",
+          "message": "Atlantik cephesinde dalga ve ruzgar artiyor.",
+          "wave_delta_m": 1.6,
+          "wind_delta_knots": 10.0,
+          "visibility_delta_nm": -1.5,
+          "current_delta_knots": 0.4
+        },
+        {
+          "code": "ny_harbor_delay",
+          "kind": "port",
+          "title": "New York Harbor Delay",
+          "start_tick": 34,
+          "end_tick": 52,
+          "severity": "advisory",
+          "message": "Liman yogunlugu nedeniyle manevra suresi uzuyor.",
+          "fuel_penalty_percent": 5.0
+        }
+      ],
+        "route": {
+          "waypoints": [
+          { "name": "Celtic Sea", "latitude": 50.6, "longitude": -5.8 },
+          { "name": "Mid Atlantic", "latitude": 45.0, "longitude": -28.0 },
+          { "name": "Western Atlantic", "latitude": 41.5, "longitude": -52.0 },
+          { "name": "New York Approach", "latitude": 40.42, "longitude": -71.8 }
+          ],
+        "ports": [
+          { "name": "Rotterdam Port", "latitude": 51.95, "longitude": 4.14, "kind": "port" },
+          { "name": "Port of New York", "latitude": 40.684, "longitude": -74.0062, "kind": "port" }
+        ]
+      }
+    },
+    {
+      "name": "southern-arc",
+      "description": "Santos to Cape Town south atlantic service.",
+      "meta": {
+        "id": "southern-arc",
+        "name": "Santos - Cape Town",
+        "ship_name": "Atlantic Meridian",
+        "origin_port": "Santos",
+        "origin_country": "Brazil",
+        "destination_port": "Cape Town",
+        "destination_country": "South Africa",
+        "color": "#8fb7a6"
+      },
+      "ship": {
+        "name": "Atlantic Meridian",
+        "latitude": -24.08,
+        "longitude": -46.42,
+        "speed_knots": 15.8,
+        "target_speed_knots": 16.8,
+        "heading_deg": 110.0,
+        "fuel_percent": 100.0,
+        "base_depth_m": 55.0,
+        "profile": {
+          "role": "bulk",
+          "class_name": "Cape Size Bulk Carrier",
+          "length_m": 292.0,
+          "beam_m": 45.0,
+          "design_draft_m": 13.6,
+          "cargo_capacity": 182000,
+          "cargo_unit": "DWT",
+          "service_speed_knots": 16.8,
+          "maneuvering_speed_knots": 7.2,
+          "max_turn_rate_deg_min": 18.0
+        },
+        "port_ops": {
+          "approach_distance_nm": 165.0,
+          "harbor_distance_nm": 40.0,
+          "approach_speed_knots": 9.2,
+          "harbor_speed_knots": 6.0,
+          "berth_duration_ticks": 16,
+          "cargo_handling_rate_per_tick": 1.4
+        }
+      },
+      "environment": {
+        "wave_height_m": 2.7,
+        "wind_speed_knots": 24.0,
+        "wind_direction_deg": 231.0,
+        "current_knots": 1.7,
+        "current_set_deg": 121.0,
+        "visibility_nm": 6.5,
+        "water_temperature_c": 14.0,
+        "air_temperature_c": 15.0
+      },
+      "engine": {
+        "base_rpm": 1000.0,
+        "max_rpm": 2360.0,
+        "idle_rpm": 360.0,
+        "base_temperature_c": 73.0,
+        "fuel_burn_lph": 172.0,
+        "rated_power_kw": 11200.0,
+        "hotel_load_kw": 210.0
+      },
+      "faults": {
+        "enabled": true,
+        "gps_drift_chance_per_hour": 0.012,
+        "radar_fault_chance_per_hour": 0.01,
+        "overheating_chance_per_hour": 0.028,
+        "oil_pressure_fault_chance_per_hour": 0.021,
+        "generator_fault_chance_per_hour": 0.009
+      },
+      "events": [
+        {
+          "code": "south_atlantic_low",
+          "kind": "weather",
+          "title": "South Atlantic Low",
+          "start_tick": 12,
+          "end_tick": 40,
+          "severity": "warning",
+          "message": "Guney Atlantik alcak basincla sert deniz uretiyor.",
+          "wave_delta_m": 1.9,
+          "wind_delta_knots": 12.0,
+          "visibility_delta_nm": -1.8,
+          "current_delta_knots": 0.6
+        },
+        {
+          "code": "bulk_trim_watch",
+          "kind": "cargo",
+          "title": "Bulk Trim Watch",
+          "start_tick": 44,
+          "end_tick": 58,
+          "severity": "advisory",
+          "message": "Yuk trim farki nedeniyle draft takibi gerekiyor.",
+          "fault_code": "low_oil_pressure"
+        }
+      ],
+        "route": {
+          "waypoints": [
+            { "name": "Santos Roads", "latitude": -24.08, "longitude": -46.42 },
+            { "name": "Rio Offshore", "latitude": -25.5, "longitude": -42.0 },
+            { "name": "South Atlantic Lane", "latitude": -30.0, "longitude": -12.0 },
+            { "name": "Walvis Basin", "latitude": -28.5, "longitude": 7.0 },
+            { "name": "Cape Town Offshore", "latitude": -34.2, "longitude": 17.4 }
+          ],
+        "ports": [
+          { "name": "Santos Port", "latitude": -23.977, "longitude": -46.3, "kind": "port" },
+          { "name": "Cape Town Terminal", "latitude": -33.907, "longitude": 18.435, "kind": "port" }
+        ]
+      }
+    },
+    {
+      "name": "arabian-link",
+      "description": "Dubai to Singapore regional route.",
+      "meta": {
+        "id": "arabian-link",
+        "name": "Dubai - Singapore",
+        "ship_name": "Gulf Horizon",
+        "origin_port": "Dubai",
+        "origin_country": "United Arab Emirates",
+        "destination_port": "Singapore",
+        "destination_country": "Singapore",
+        "color": "#d9a13e"
+      },
+      "ship": {
+        "name": "Gulf Horizon",
+        "latitude": 21.8,
+        "longitude": 60.8,
+        "speed_knots": 14.5,
+        "target_speed_knots": 15.3,
+        "heading_deg": 115.0,
+        "fuel_percent": 100.0,
+        "base_depth_m": 36.0,
+        "profile": {
+          "role": "tanker",
+          "class_name": "LR2 Product Tanker",
+          "length_m": 249.0,
+          "beam_m": 44.0,
+          "design_draft_m": 12.3,
+          "cargo_capacity": 118000,
+          "cargo_unit": "DWT",
+          "service_speed_knots": 15.5,
+          "maneuvering_speed_knots": 7.4,
+          "max_turn_rate_deg_min": 19.0
+        },
+        "port_ops": {
+          "approach_distance_nm": 155.0,
+          "harbor_distance_nm": 36.0,
+          "approach_speed_knots": 8.8,
+          "harbor_speed_knots": 5.6,
+          "berth_duration_ticks": 13,
+          "cargo_handling_rate_per_tick": 1.6
+        }
+      },
+      "environment": {
+        "wave_height_m": 1.4,
+        "wind_speed_knots": 16.0,
+        "wind_direction_deg": 212.0,
+        "current_knots": 1.0,
+        "current_set_deg": 102.0,
+        "visibility_nm": 8.5,
+        "water_temperature_c": 24.0,
+        "air_temperature_c": 28.0
+      },
+      "engine": {
+        "base_rpm": 920.0,
+        "max_rpm": 2200.0,
+        "idle_rpm": 340.0,
+        "base_temperature_c": 69.0,
+        "fuel_burn_lph": 138.0,
+        "rated_power_kw": 8800.0,
+        "hotel_load_kw": 205.0
+      },
+      "faults": {
+        "enabled": true,
+        "gps_drift_chance_per_hour": 0.011,
+        "radar_fault_chance_per_hour": 0.013,
+        "overheating_chance_per_hour": 0.02,
+        "oil_pressure_fault_chance_per_hour": 0.015,
+        "generator_fault_chance_per_hour": 0.012
+      },
+      "events": [
+        {
+          "code": "monsoon_edge",
+          "kind": "weather",
+          "title": "Monsoon Edge",
+          "start_tick": 14,
+          "end_tick": 37,
+          "severity": "warning",
+          "message": "Hint Okyanusu cikisinda muson etkisi artiyor.",
+          "wave_delta_m": 1.2,
+          "wind_delta_knots": 9.0,
+          "current_set_shift_deg": 16.0
+        },
+        {
+          "code": "malacca_constrained",
+          "kind": "channel",
+          "title": "Malacca Constrained Waters",
+          "start_tick": 40,
+          "end_tick": 68,
+          "severity": "warning",
+          "message": "Bogaz gecisinde dar kanal manevrasi.",
+          "visibility_delta_nm": -1.0,
+          "fuel_penalty_percent": 7.0,
+          "fault_code": "radar_fault"
+        }
+      ],
+        "route": {
+          "waypoints": [
+          { "name": "Oman Offshore", "latitude": 21.8, "longitude": 60.8 },
+          { "name": "Arabian Sea", "latitude": 18.5, "longitude": 66.0 },
+          { "name": "Laccadive Sea", "latitude": 8.0, "longitude": 72.0 },
+          { "name": "South of Sri Lanka", "latitude": 5.5, "longitude": 79.5 },
+          { "name": "South Bay of Bengal", "latitude": 5.5, "longitude": 88.0 },
+          { "name": "Andaman Approach", "latitude": 6.0, "longitude": 94.0 },
+          { "name": "Malacca North", "latitude": 5.6, "longitude": 98.5 },
+          { "name": "Malacca Mid", "latitude": 4.0, "longitude": 100.5 },
+          { "name": "Malacca Bend", "latitude": 2.1, "longitude": 101.7 },
+          { "name": "Malacca South", "latitude": 1.2, "longitude": 102.8 },
+          { "name": "Karimun Waters", "latitude": 0.8, "longitude": 103.6 },
+          { "name": "Singapore Strait", "latitude": 1.0, "longitude": 103.75 },
+          { "name": "Singapore Hub", "latitude": 1.2644, "longitude": 103.82 }
+          ],
+        "ports": [
+          { "name": "Jebel Ali", "latitude": 24.985, "longitude": 55.0287, "kind": "port" },
+          { "name": "Singapore Hub", "latitude": 1.2644, "longitude": 103.82, "kind": "port" }
+        ]
+      }
+    }
+  ]
+}

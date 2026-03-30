@@ -1,0 +1,82 @@
+{
+  "name": "storm",
+  "description": "Storm conditions with stronger drag and lower visibility.",
+  "tick_rate_hz": 1.0,
+  "ship": {
+    "name": "Marmara Trainer",
+    "latitude": 40.9821,
+    "longitude": 29.021,
+    "speed_knots": 10.0,
+    "target_speed_knots": 12.8,
+    "heading_deg": 95.0,
+    "fuel_percent": 90.0,
+    "base_depth_m": 38.0
+  },
+  "environment": {
+    "wave_height_m": 3.8,
+    "wind_speed_knots": 32.0,
+    "current_knots": 2.4,
+    "visibility_nm": 2.5,
+    "water_temperature_c": 14.0
+  },
+  "engine": {
+    "base_rpm": 950.0,
+    "max_rpm": 2300.0,
+    "base_temperature_c": 72.0,
+    "fuel_burn_lph": 160.0
+  },
+  "sensors": {
+    "noise_scale": 1.8,
+    "offline": []
+  },
+  "route": {
+    "waypoints": [
+      {
+        "name": "Storm Gate",
+        "latitude": 40.9821,
+        "longitude": 29.021
+      },
+      {
+        "name": "Heavy Seas",
+        "latitude": 40.9794,
+        "longitude": 29.0385
+      },
+      {
+        "name": "Cross Current",
+        "latitude": 40.975,
+        "longitude": 29.0548
+      },
+      {
+        "name": "Shelter Vector",
+        "latitude": 40.9694,
+        "longitude": 29.0721
+      }
+    ],
+    "ports": [
+      {
+        "name": "Kadikoy Shelter",
+        "latitude": 40.9894,
+        "longitude": 29.0276,
+        "kind": "harbor"
+      },
+      {
+        "name": "Bostanci Refuge",
+        "latitude": 40.9528,
+        "longitude": 29.0942,
+        "kind": "harbor"
+      }
+    ]
+  },
+  "alarms": {
+    "fuel_warning_percent": 50.0,
+    "fuel_critical_percent": 25.0,
+    "engine_temp_warning_c": 79.0,
+    "engine_temp_critical_c": 88.0,
+    "route_deviation_warning_nm": 0.2,
+    "route_deviation_critical_nm": 0.45,
+    "wave_height_warning_m": 2.5,
+    "wave_height_critical_m": 3.6,
+    "visibility_warning_nm": 3.5,
+    "visibility_critical_nm": 2.2
+  }
+}

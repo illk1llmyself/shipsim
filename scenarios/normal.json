@@ -1,0 +1,82 @@
+{
+  "name": "normal",
+  "description": "Baseline Marmara training route with calm weather.",
+  "tick_rate_hz": 1.0,
+  "ship": {
+    "name": "Marmara Trainer",
+    "latitude": 40.9821,
+    "longitude": 29.021,
+    "speed_knots": 12.0,
+    "target_speed_knots": 12.8,
+    "heading_deg": 87.0,
+    "fuel_percent": 100.0,
+    "base_depth_m": 38.0
+  },
+  "environment": {
+    "wave_height_m": 1.1,
+    "wind_speed_knots": 14.0,
+    "current_knots": 0.8,
+    "visibility_nm": 8.0,
+    "water_temperature_c": 18.0
+  },
+  "engine": {
+    "base_rpm": 900.0,
+    "max_rpm": 2200.0,
+    "base_temperature_c": 68.0,
+    "fuel_burn_lph": 120.0
+  },
+  "sensors": {
+    "noise_scale": 1.0,
+    "offline": []
+  },
+  "route": {
+    "waypoints": [
+      {
+        "name": "Kadikoy Line",
+        "latitude": 40.9821,
+        "longitude": 29.021
+      },
+      {
+        "name": "Moda Turn",
+        "latitude": 40.9858,
+        "longitude": 29.0345
+      },
+      {
+        "name": "Fener Track",
+        "latitude": 40.9893,
+        "longitude": 29.0492
+      },
+      {
+        "name": "Outer Leg",
+        "latitude": 40.9911,
+        "longitude": 29.0661
+      }
+    ],
+    "ports": [
+      {
+        "name": "Haydarpasa Port",
+        "latitude": 40.995,
+        "longitude": 29.0186,
+        "kind": "port"
+      },
+      {
+        "name": "Pendik Marina",
+        "latitude": 40.8759,
+        "longitude": 29.2352,
+        "kind": "marina"
+      }
+    ]
+  },
+  "alarms": {
+    "fuel_warning_percent": 42.0,
+    "fuel_critical_percent": 20.0,
+    "engine_temp_warning_c": 81.0,
+    "engine_temp_critical_c": 90.0,
+    "route_deviation_warning_nm": 0.3,
+    "route_deviation_critical_nm": 0.65,
+    "wave_height_warning_m": 2.2,
+    "wave_height_critical_m": 4.0,
+    "visibility_warning_nm": 4.0,
+    "visibility_critical_nm": 2.0
+  }
+}
