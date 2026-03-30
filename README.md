@@ -199,21 +199,6 @@ shipsim/
     API.md
 ```
 
-## Baska Birine Gonderirken
-
-Birine projeyi verdiginde en hizli yol su:
-
-1. Repo klasorunu gondersin ya da clone etsin.
-2. Docker kurulu olsun.
-3. Asagidaki iki komutu calistirsin:
-
-```bash
-docker build -t shipsim-app .
-docker run --name shipsim-app -p 8000:8000 shipsim-app
-```
-
-Bu kadar. Sonra `http://127.0.0.1:8000/` adresinden sistemi gorebilir.
-
 ## Sorun Giderme
 
 ### Tarayici eski arayuzu gosteriyor
